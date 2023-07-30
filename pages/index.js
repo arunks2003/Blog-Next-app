@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Script from 'next/script'
 import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
-import Dummy from './components/dummy'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,9 +12,7 @@ export default function Home() {
     <>
       <style jsx>
         {`
-    .mySpan{
-      color: green;
-    }
+    
     `}
       </style>
       <Head>
@@ -26,7 +23,6 @@ export default function Home() {
       </Head>
       <nav className={`${styles.navbar}`}>
         <ul>
-
           <Link href='/'><li>Home</li></Link>
           <Link href='/about'><li>About</li></Link>
           <Link href='/blog'><li>Blog</li></Link>
@@ -36,12 +32,12 @@ export default function Home() {
       {/* <Script src='/sc.js' strategy='lazyOnload'></Script> */}
       <main className={`${styles.main} ${inter.className}`}>
         <div className={`${styles.company}`}>
-          <div className={`${styles.backgroundBlur}`}></div>
-          <h1 className={`${styles.head}`}>
-            <span className='mySpan'>Hunding Coders</span>
-
-          </h1>
-          <Dummy></Dummy>
+          <div className={`${styles.intro}`}>
+            <h1 className={`${styles.head}`}>
+              <span className='mySpan'>Hunting Coders</span>
+            </h1>
+          </div>
+          <img src="/homeimg.jpg" className={`${styles.homeimg}`} alt="" />
           <p className={`${styles.descr}`}>A blog Website using NextJs</p>
         </div>
 
